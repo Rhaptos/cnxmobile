@@ -464,7 +464,7 @@
   </xsl:template>
 
   
-  <!-- csymbol stuff: Connexions MathML extensions -->
+  <!-- csymbol stuff: OpenStax CNX MathML extensions -->
 
   <!-- Combination -->
   <xsl:template match="m:apply[child::*[position()=1 and     local-name()='csymbol' and @definitionURL='http://www.openmath.org/cd/combinat1.ocd']]">

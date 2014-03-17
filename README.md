@@ -1,7 +1,7 @@
 cnxmobile
 =========
 
-Mobile site for Connexions using Deliverance
+Mobile site for OpenStax CNX using Deliverance
 
 Installation
 ------------
