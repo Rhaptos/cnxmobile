@@ -1,0 +1,69 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    color: #EE7700;
+    font-weight: bold;
+    padding-top: 0;
+    font-size: 160%;
+}
+
+#portal-top {
+    background: url("/_theme/images/portal-top-background.gif") repeat-x scroll 0 0 #336699;
+}
+
+#portal-logo {
+    background-image: url('/_theme/images/logo.gif');
+    background-repeat: no-repeat;
+    margin:0 2em 0 22px;
+    width:235px;
+}
+
+#portal-logo a {
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    height: 0 !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 80px 0 0;
+    text-decoration: none;
+    width: 235px;
+}
+
+ul#portal-globalnav {
+    margin-left: 0;
+    padding-left: 0;
+}
+#portal-globalnav li {
+    list-style: none;
+    display: inline;
+    padding: 1em;
+}
+
+#visual-portal-wrapper {
+    padding: 0em 1em;
+}
+
+div.mathml {
+    text-align: center;
+}
+
+div.exercise {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+
+.inner-figure {
+    border-color: #999999;
+    border-left: 0 solid #999999;
+    border-right: 0 solid #999999;
+    border-style: solid;
+    border-width: 1px 0;
+    padding: 0.5em 0 0.75em;
+}
+.inner-figure {
+    text-align: center;
+}

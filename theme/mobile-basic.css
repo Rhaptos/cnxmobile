@@ -1,0 +1,318 @@
+/* ====== Hide certain elements completely when on a basic phone.  Most of these elements will be turned back on via mobile-smart.css ====== */
+
+.hiddenStructure, #cnx_course_home, #cnx_course_authors, #cnx_prev_next_top, .cnx_email_author, #cnx_order_link, #cnx_prev_next_top, #portal-globalnav {
+    display: none;
+}
+
+/* ====== General elements ====== */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-size: .7em;
+}
+
+a {
+  color: #336699;
+}
+
+a:visited {
+    color: #647;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: .5em 0;
+    font-size: 1em !important;
+}
+
+ul, ol {
+    padding-left: 6px;
+    list-style-type: disc;
+    margin: .5em 0;
+}
+
+ol {
+    padding-left: 10px;
+    list-style-type: decimal;
+}
+
+p { 
+    margin: .75em 0;
+}
+
+/* ====== Header ====== */
+
+h1 {
+    color: #ee7700;
+    font-weight: bold;
+    padding-top: 0;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#portal-top {
+    background-color: #336699;
+    padding: .2em .5em;
+}
+
+#portal-logo {
+    font-size: 1em;
+}
+
+#portal-logo-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+hr {
+    margin: 0;
+    height: 0;
+    border-width: 0;
+    border-top: 1px solid #999;
+}
+
+#visual-portal-wrapper {
+    padding: .5em;
+    padding-bottom: 0;
+}
+
+#cnx_navigation_pointer{
+    text-align: right;
+    margin: 0 0 .5em;
+}
+
+#cnx_authorship {
+    color: #555;
+    font-size: .9em;
+    margin: .5em 0 .75em;
+}
+
+/* ====== Collection ====== */
+
+#cnx_course_start {
+    font-size: 1.2em;
+}
+
+#cnx_course_contributors {
+    display: none;
+}
+
+.portletItem {
+    margin: 0;
+}
+
+#cnx_course_content {
+    margin: 1em 0;
+}
+
+#cnx_course_content dl, #cnx_course_content dt, #cnx_course_content dd {
+    margin: 0;
+}
+
+#cnx_course_content ul, #cnx_course_content li {
+    list-style-type: none;
+}
+
+.cnx_chapter_header, #cnx_course_content ul {
+    margin: 0;
+}
+
+
+/* ====== Footer ====== */
+
+#cnx_navigation_links {
+    margin: 0 0 1em;
+}
+
+#cnx_navigation_links h2 {
+    margin-bottom: 0;
+}
+
+#cnx_navigation_links ul {
+    margin-top: 0;
+}
+
+#cnx_navigation_links a {
+    font-weight: normal;
+}
+
+#cnx_prev_next_bottom {
+    list-style-type: none;
+}
+
+
+/* ====== CNXML ====== */
+
+.section {
+    margin: .75em 0 0; /* margins seem to accumulate instead of collapsing! */
+}
+
+.mathml {
+    text-align: center;
+}
+
+.exercise {
+    border-top: 1px dashed #000000;
+    border-bottom: 1px dashed #000000;
+}
+
+.exercise, .figure, .definition, .rule{
+    margin: 1em 0;
+}
+
+.figure-caption, .horizontal-subfigure-caption, .vertical-subfigure-caption {
+    font-size: .95em;
+    padding-top: .25em;
+}
+
+.inner-figure {
+    border: 1px solid #999999;
+    border-width: 1px 0;
+    padding: 0.5em 0 0.75em;
+    text-align: center;
+}
+
+.inner-figure table {
+    margin: auto;
+}
+
+.equation {
+    position: relative;
+    margin: .5em 0;
+}
+
+.equation-number {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.definition dd {
+    margin: .5em 0 0 1em;
+}
+
+blockquote.quote {
+    margin: .5em 1em;
+    font-size: .95em;
+}
+
+td {
+    padding: .25em;
+}
+
+code {
+    font-size: 1.15em;
+    color: #060;
+}
+
+.note {
+    margin: .5em 1em;
+}
+
+.note-header {
+    display: inline;
+}
+
+.note-header .cnx_label, .rule-header .cnx_label, .cnxn-target{
+    text-transform: capitalize;
+}
+
+ol.arabic { list-style-type: decimal; }
+ol.upper-roman { list-style-type: upper-roman; }
+ol.lower-roman { list-style-type: lower-roman; }
+ol.upper-alpha { list-style-type: upper-alpha; }
+ol.lower-alpha { list-style-type: lower-alpha; }
+ul.bullet { list-style-type: disc; }
+ul.open-circle { list-style-type: circle; }
+ul.other { list-style-type: none; }
+ol.other { list-style-type: none; }
+ul.labeled-item { list-style-type: none; }
+
+span .list-header {
+   display: inline;
+}
+
+div.preformat {
+    margin: .5em 0;
+}
+
+pre.preformatted {
+    font-family: tahoma, verdana, arial, helvetica, sans-serif;
+    font-size: 1em;
+    margin: .5em 0;
+}
+
+span.preformat {
+    font-family: courier, courier new, monospace;
+    font-size: 1.18em;
+}
+
+.cnx_label, .cnx_before, .cnxn, em, .term {
+    font-weight: bold;
+}
+
+.smallcaps {
+    font-variant: small-caps;
+}
+
+cite, em, i.emphasis .cite-title i, i .foreign, .foreign i, .term {
+    font-style: normal;
+}
+
+i em, i cite, .foreign cite, .foreign em, .foreign, .term em, em .term {
+    font-style: italic;
+}
+
+.normal {
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-variant: normal;
+}
+
+.normal em {
+    font-style: normal;
+}
+
+.cnxn-target {
+    text-transform: capitalize;
+}
+
+pre.underline {
+    text-decoration: underline;              
+}
+
+pre.space {
+    display: inline;
+}
+
+.footnote-reference {
+    vertical-align: .5em;
+    line-height: .1em;
+}
+
+.bibtex-reference {
+    vertical-align: .5em;
+    line-height: .1em;
+    font-style: normal;
+}
+
+.glossary-container, .references, .footnotes{
+  margin: 2em 0 1em;
+  border-top: 1px #ccc solid;
+  padding: .5em 0;
+}
+
+.glossary {
+    margin: 1em 0;
+}
+
+.glossary-container .glossary div, .glossary h3, .glossary h4, .glossary h5, .glossary h6, .glossary p, .glossary dt, .glossary dd {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.glossary dd, .glossary .example-header {
+    margin-left: .3em;
+}

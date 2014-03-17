@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en">
+
+    <head>
+        <title>Welcome to Connexions</title>
+        <link rel="stylesheet" type="text/css" href="/_theme/mobile-basic.css"/>
+
+        <!-- If using a smart phone (testing this via JS detection), pull in more full-feature CSS and JS. -->
+        <script type="text/javascript" src="/_theme/mobile.js"> </script>
+        <base href="#" />
+    </head>
+
+    <body>
+        <div id="portal-top">
+            <h1 id="portal-logo"><a href="/">Connexions</a></h1>
+        </div>
+
+        <ul id="portal-globalnav">
+            <span><a href="/">Home</a></span>
+            <span><a href="/content">Content</a></span>
+            <span><a href="/lenses">Lenses</a></span>
+            <span><a href="/aboutus">About us</a></span>
+        </ul>
+
+        <hr/>
+
+        <div id="visual-portal-wrapper">
+            <div id="cnx_intro_text">
+                Connexions is:
+
+                a place to view and share educational material made of small
+                knowledge chunks called modules that can be organized as
+                courses, books, reports, etc. Anyone may view or contribute:
+
+                    * authors create and collaborate
+                    * instructors rapidly build and share custom collections
+                    * learners find and explore content
+
+            </div>
+            <p id="cnx_find_stats">
+                <strong>16838</strong> reusable modules woven into 
+                <strong>1019</strong> collections.
+            </p>
+            <div id="cnx_find_search">
+                <form action="/content/search" name="content_search">
+                    <input type="hidden" name="target">
+                    <label class="overlabel-apply" for="cnx_find_search_words">Search Content</label>
+                    <input type="text" id="cnx_find_search_words" tabindex="3" accesskey="s" size="20" name="words">
+                    <input type="hidden" value="weakAND" name="allterms">
+                    <input type="submit" name="search" value="Go" tabindex="4" accesskey="s" class="context searchButton">
+                </form>
+            </div>
+
+            <p id="browse-content"><a href="/content">Browse Content</a></p>
+
+            <p id="view-lenses"><a href="/lenses">View Lenses</a></p>
+        </div>
+
+
+    </body>
+
+</html>
+
