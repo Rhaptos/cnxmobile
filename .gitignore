@@ -39,6 +39,3 @@ nosetests.xml
 
 # Finder
 .DS_Store
-
-# Configuration
-etc/

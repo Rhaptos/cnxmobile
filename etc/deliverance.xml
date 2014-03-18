@@ -1,0 +1,121 @@
+<ruleset>
+
+    <server-settings>
+        <server>localhost:5000</server>
+        <execute-pyref>true</execute-pyref>
+        <dev-allow>127.0.0.1</dev-allow>
+        <dev-htpasswd>deliv-users.htpasswd</dev-htpasswd>
+    </server-settings>
+
+    <proxy path="/_theme">
+        <dest href="{here}/../theme" />
+    </proxy>
+
+    <proxy path="/">
+        <dest href="http://passthru.cnx.org/VirtualHostBase/http/m.cnx.org/plone/VirtualHostRoot" />
+        <request pyref="cnxmobile:modify_proxy_request" />
+        <response rewrite-links="1" pyref="cnxmobile:transform" />
+    </proxy>
+
+    <theme href="/_theme/theme.html" />
+
+    <match path="exact:/" class="home" />
+    <match path="exact:/content" class="browse" />
+    <match path="/content/browse_content" class="browse_content" />
+    <match path="wildcard:/content/m*" class="module" />
+    <match path="wildcard:/content/c*" class="collection" />
+    <match path="/content/search" class="search" />
+
+    <rule>
+        <drop content="/html/head/style" />
+        <drop content="/html/head/link" />
+        <drop content="/html/head/script" />
+        <append content="/html/head/meta" theme="/html/head/title"/>
+        <drop content="#lens_feed_icon" />
+        <drop content="//*[@class = 'lens_listing']/li/img" />
+        <replace content="#content" theme="#content"/>
+    </rule>
+
+    <rule class="home">
+        <theme href="/_theme/home.html" />
+        <drop content="//*[@id = 'text']/*[name() = 'p' and (position() = 3)]"/>
+        <drop content="//*[@id = 'text']/*[name() = 'p' and (position() = 3)]"/>
+        <replace content="children:#cnx_intro_text" theme="children:#cnx_intro_text"/> 
+        <replace content="#cnx_find_stats" theme="#cnx_find_stats"/>
+        <replace content="#cnx_find_search" theme="#cnx_find_search"/>
+    </rule>
+
+    <rule class="browse">
+        <theme href="/_theme/browse.html" />
+        <drop content="/html/head/style" />
+        <drop content="/html/head/link" />
+        <drop content="/html/head/script" />
+        <replace theme="#cnx_browse" content="#cnx_browse"/>
+    </rule>
+
+    <rule class="browse_content">
+        <theme href="/_theme/browse.html" />
+        <drop content="/html/head/style" />
+        <drop content="/html/head/link" />
+        <drop content="/html/head/script" />
+        <replace theme="#cnx_browse" content="#cnx_refine"/>
+    </rule>
+
+
+    <rule class="search">
+        <theme href="/_theme/search.html" />
+        <drop content="/html/head/style" />
+        <drop content="/html/head/link" />
+        <drop content="/html/head/script" />
+        <drop content="//*[@class = 'object_name']/*[name() = 'a' and (position() = 1)]"/>
+        <replace theme="#displaying_results_number"
+                 content="#displaying_results_number"/>
+        <append content="attributes:input#words_input"
+                theme="attributes:input#words_input" />
+        <append content="attributes:input#title_box"
+                theme="attributes:input#title_box" />
+        <append content="attributes:input#author_box"
+                theme="attributes:input#author_box" />
+        <append content="attributes:input#collection_box"
+                theme="attributes:input#collection_box" />
+        <replace theme=".displaying_results_query"
+                 content=".displaying_results_query"/>
+        <replace theme="#listingBarNumbers" 
+                 content="#results_row_two .listingBarNumbers"/>
+        <replace theme="#batchnav" content="#batchnav"/>
+        <replace theme="children:#results" content="children:#results"/>
+    </rule>
+
+    <rule class="module">
+        <theme href="/_theme/content.html" />
+        <drop content="/html/head/style" />
+        <drop content="/html/head/link" />
+        <drop content="/html/head/script" />
+        <drop theme="#toc_header" />
+        <replace content="#cnx_course_home" theme="#cnx_course_home"/>
+        <replace content="#cnx_course_authors" theme="#cnx_course_authors"/>
+        <replace content="#cnx_prev_next_top" theme="#cnx_prev_next_top"/>
+        <replace content="#cnx_module_header h1" theme="#cnx_module_header"/>
+        <replace content="#cnx_authorship" theme="#cnx_authorship"/>
+        <replace theme="children:#cnx_splash" content="children:#cnx_splash"/>
+        <replace theme="children:#cnx_main" content="children:#cnx_main"/>
+        <drop content="li.cnxn_toc"/>
+        <replace content="#cnx_prev_next_bottom" theme="#cnx_prev_next_bottom"/>
+    </rule>
+
+    <rule class="collection">
+        <theme href="/_theme/content.html" />
+        <drop content="/html/head/style" />
+        <drop content="/html/head/link" />
+        <drop content="/html/head/script" />
+        <replace content="#cnx_course_home" theme="#cnx_course_home"/>
+        <replace content="#cnx_course_authors" theme="#cnx_course_authors"/>
+        <replace content="#cnx_prev_next_top" theme="#cnx_prev_next_top"/>
+        <replace content="#cnx_module_header h1" theme="#cnx_module_header"/>
+        <replace content="#cnx_authorship" theme="#cnx_authorship"/>
+        <replace content="#cnx_course_navigation_contents" theme="#cnx_course_navigation_contents"/>
+        <replace theme="children:#cnx_main" content="children:#cnx_main"/>
+    </rule>
+
+
+</ruleset>

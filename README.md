@@ -8,23 +8,25 @@ Installation
 
 1. Bootstrap and run buildout:
 
-    $ virtualenv --no-site-packages .
-    $ ./bin/python bootstrap.py
-    $ ./bin/buildout
+```sh
+$ virtualenv --no-site-packages .
+$ ./bin/python bootstrap.py
+$ ./bin/buildout
+```
 
-2. Configure ports in etc/deliverance.xml
+2. Configure ports in etc/deliverance.xml and users in etc/deliv-users.htpasswd
 
 3. Customise font paths in
    src/upfront.mathmlimage/upfront/mathmlimage/svgmath.xml
 
    If you want to use the true type fonts referenced in the config
-   file you simply install the ttf-freefont and msttcorefonts package on
+   file, simply install the ttf-freefont and msttcorefonts packages on
    debian or ubuntu.
 
 4. Start deliverance-proxy:
 
-    $ ./bin/deliverance-proxy ./etc/deliverance.xml
+```sh
+$ ./bin/deliverance-proxy ./etc/deliverance.xml
+```
 
-5. Browse to http://localhost:8080
-
-
+5. Browse to http://localhost:port
